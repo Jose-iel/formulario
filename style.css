@@ -1,4 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+@media(max-width : 720px){
+  body{
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    background: #fff!important;
+    width: 100vh;
+    height: 1240px;
+    margin: 0 auto;
+  }
+  .container{
+    width: 560px!important;
+    height: 1240!important;
+    padding: 50px 35px 10px 35px;
+    margin-right: 30px;
+  }
+
+  .container .form-outer{
+    margin-left: 40px!important;
+  }
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -10,7 +33,6 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /* overflow: hidden; */
   background: -webkit-linear-gradient(bottom, #0b344d, #042031);
 }
 ::selection{
