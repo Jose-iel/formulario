@@ -25,17 +25,11 @@ const data = {
 
 function salvarDados(){
     //SECTION-01
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const office = document.getElementById('office').value;
-    const workers = document.getElementById('workers').value;
-    const business = document.getElementById('business').value;
-
-    data.name = name;
-    data.email = email;
-    data.office = office;
-    data. workers = workers;
-    data.business = business;
+    data.name = document.getElementById('name').value;
+    data.email = document.getElementById('email').value;
+    data.office = document.getElementById('office').value;
+    data.workers = document.getElementById('workers').value;
+    data.business = document.getElementById('business').value;
 
     //SECTION-02
     const s2option1 = document.getElementById('s2option1');
@@ -44,7 +38,6 @@ function salvarDados(){
     const s2option4 = document.getElementById('s2option4');
     const s2option5 = document.getElementById('s2option5');
     const s2option6 = document.getElementById('s2option6');
-
 
     if (s2option1.checked){
         const dados = s2option1.value
@@ -110,16 +103,11 @@ function salvarDados(){
     }
 
     //SECTION-04
-    const analytics = document.getElementById('analytics').value;
-    const history = document.getElementById('history').value;
-
-    data.analytics = analytics;
-    data.history = history;
+    data.analytics = document.getElementById('analytics').value;
+    data.history = document.getElementById('history').value;
 
     //SECTION-05
-    const message = document.getElementById('message').value;
-
-    data.message = message;
+    data.message = document.getElementById('message').value;
 
     console.log(data);
 }
