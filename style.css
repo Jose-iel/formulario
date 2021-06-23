@@ -1,25 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-@media(max-width : 720px){
+@media(max-width : 600px){
   body{
     display: flex!important;
     align-items: center!important;
     justify-content: center!important;
     background: #fff!important;
-    width: 100vh;
-    height: 1240px;
-    margin: 0 auto;
+    width: 360px!important;
+    height: 1100px!important;
   }
   .container{
-    width: 560px!important;
-    height: 1240!important;
-    padding: 50px 35px 10px 35px;
-    margin-right: 30px;
+    width: 360px!important;
+    height: 1100px!important;
   }
 
   .container .form-outer{
-    margin-left: 40px!important;
+    margin-left: 15px!important;
   }
+  .form-outer form .page .field{
+    width: 330px!important;
+  }
+  .form-outer form .page .title{
+    font-size: 20px!important;
+    width: 350px!important;
+  }
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after{
+  right: -41px!important;
+  width: 35px!important;
+  }
+  form .page .field .label{
+    width: 370px!important;
+    text-align: left!important;
+  }
+  
 }
 
 *{
