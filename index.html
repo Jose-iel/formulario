@@ -55,23 +55,23 @@
           <div class="page slide-page">
 
             <div class="title">Preencha o formulário a seguir para iniciar o assessment</div>
-            <div class="field">
+            <div class="inputCampo">
               <div class="label">Nome completo:</div>
               <input type="text" id="name">
             </div>
-            <div class="field">
+            <div class="inputCampo">
               <div class="label">E-mail corporativo:</div>
               <input type="text" id="email">
             </div>
-            <div class="field">
+            <div class="inputCampo">
               <div class="label">Quantidade de funcionários da empresa:</div>
               <input type="text" id="workers">
             </div>
-            <div class="field">
+            <div class="inputCampo">
               <div class="label">Seu cargo ou função:</div>
               <input type="text" id="office">
             </div>
-            <div class="field">
+            <div class="inputCampo">
               <div class="label">Segmento do negócio:</div>
               <input type="text" id="business">
             </div>
@@ -151,15 +151,15 @@
 
           <div class="page">
             <div class="title">Qual o seu volume de dados atual?</div>
-            <div class="field">
+            <div class="inputCampo">
               <div class="label">Total de volume das bases de Analytics &#40últimos 3 mêses&#41</div>
               <input type="text" id="analytics">
             </div>
-            <div class="field">
-              <div class="label">Total de volume histórico &#40+3 meses&#41</div>
+            <div class="inputCampo">
+              <div class="label" id="label3">Total de volume histórico &#40+3 meses&#41</div>
               <input type="text" id="history">
             </div>
-            <div class="field btns">
+            <div class="botao">
               <button class="prev-3 prev">Anterior</button>
               <button class="next-3">Avançar</button>
             </div>
@@ -167,11 +167,11 @@
 
           <div class="page">
             <div class="title">Explique com mais detalhes, como podemos ajudá-lo na sua jornada Data Driven?</div>
-            <div class="field">
+            <div class="inputCampo">
               <div class="label">Mensagem:</div>
-              <textarea class="textarea" id="message" cols="98" rows="60" placeholder=" |" onfocus="this.placeholder=''" onblur="this.placeholder=' |'"></textarea>
+              <textarea class="textarea" id="message" cols="" rows="" placeholder=" |" onfocus="this.placeholder=''" onblur="this.placeholder=' |'"></textarea>
             </div>
-            <div class="field btns" style="margin-top: 300px!important;">
+            <div class="field btns" style="margin-top: 320px!important;">
               <button class="prev-4 prev">Anterior</button>
               <button class="submit" onclick="salvarDados()">Enviar</button>
             </div>
