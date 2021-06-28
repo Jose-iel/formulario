@@ -49,7 +49,7 @@
           <div class="check fas fa-check"></div>
         </div>
       </div>
-      
+
       <div class="form-outer">
         <form action="#">
           <div class="page slide-page">
@@ -65,7 +65,22 @@
             </div>
             <div class="inputCampo">
               <div class="label">Quantidade de funcionários da empresa:</div>
-              <input type="text" id="workers">
+                <div class="quantidade">
+                  <input type="radio" id="ate50" name="quantidade" class="radio" value="Até 50">
+                  <span class="text-quant">Até 50</span>
+                </div>
+                <div class="quantidade">
+                  <input type="radio" id="ate300" name="quantidade" class="radio" value="Entre 51 e 300">
+                  <span class="text-quant">Entre 51 e 300</span>
+                </div>
+                <div class="quantidade">
+                  <input type="radio" id="ate1000" name="quantidade" class="radio" value="Entre 301 e 1000">
+                  <span class="text-quant">Entre 301 e 1000</span>
+                </div>
+                <div class="quantidadef">
+                  <input type="radio" id="acima1000" name="quantidade" class="radio" value="Acima de 1000">
+                  <span class="text-quant">Acima de 1000</span>
+                </div>        
             </div>
             <div class="inputCampo">
               <div class="label">Seu cargo ou função:</div>
@@ -73,11 +88,24 @@
             </div>
             <div class="inputCampo">
               <div class="label">Segmento do negócio:</div>
-              <input type="text" id="business">
+              <select id="select">
+                <option value="Agricultura">Agricultura</option>
+                <option value="Comunicação">Comunicação</option>
+                <option value="Educação">Educação</option>
+                <option value="Energia e Gás">Energia e Gás</option>
+                <option value="Financeiro">Financeiro</option>
+                <option value="Governo">Governo</option>
+                <option value="Indústria">Indústria</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Serviços">Serviços</option>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="Varejo">Varejo</option>
+                <option value="Outro">Outro</option>
+              </select>
             </div>
 
-            <div class="field">
-              <button class="firstNext next">Avançar</button>
+            <div class="botao">
+              <button type="button" class="firstNext next">Avançar</button>
             </div>
           </div>
 
@@ -107,9 +135,9 @@
               <input class="radio" type="checkbox" value="Real Time Analytics" id="s2option6">
               <div class="radiotext">Real Time Analytics</div>
             </div>
-            <div class="field btns">
-              <button class="prev-1 prev">Anterior</button>
-              <button class="next-1 next">Avançar</button>
+            <div class="botao">
+              <button type="button" class="prev-1 prev">Anterior</button>
+              <button type="button" class="next-1 next">Avançar</button>
             </div>
           </div>
 
@@ -143,9 +171,9 @@
               <input class="radio" type="checkbox" value="Hibrido &#40Nuvem + On Premises&#41" id="s3option7">
               <div class="radiotext">Hibrido &#40Nuvem + On Premises&#41</div>
             </div>
-            <div class="field btns">
-              <button class="prev-2 prev">Anterior</button>
-              <button class="next-2 next">Avançar</button>
+            <div class="botao">
+              <button type="button" class="prev-2 prev">Anterior</button>
+              <button type="button" class="next-2 next">Avançar</button>
             </div>
           </div>
 
@@ -160,8 +188,8 @@
               <input type="text" id="history">
             </div>
             <div class="botao">
-              <button class="prev-3 prev">Anterior</button>
-              <button class="next-3">Avançar</button>
+              <button type="button" class="prev-3 prev">Anterior</button>
+              <button type="button" class="next-3">Avançar</button>
             </div>
           </div>
 
@@ -171,9 +199,9 @@
               <div class="label">Mensagem:</div>
               <textarea class="textarea" id="message" cols="" rows="" placeholder=" |" onfocus="this.placeholder=''" onblur="this.placeholder=' |'"></textarea>
             </div>
-            <div class="field btns" style="margin-top: 320px!important;">
+            <div class="botao" style="margin-top: 300px!important;">
               <button class="prev-4 prev">Anterior</button>
-              <button class="submit" onclick="salvarDados()">Enviar</button>
+              <button type="button" class="submit" onclick="salvarDados()">Finalizar</button>
             </div>
           </div>
         </form>

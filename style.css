@@ -106,7 +106,7 @@ body{
 }
 .form-outer form .page .field{
   width: 496px;
-  height: 45px;
+  height: 20px;
   margin: 45px 0;
   display: flex;
   position: relative;
@@ -154,6 +154,7 @@ form .page .inputCampo input{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .botao{
   display: flex;
   width: 496px;
@@ -183,7 +184,9 @@ form .page .inputCampo input{
   margin-top: 70px;
 }
 
-
+a{
+  width: 100%;
+}
 
 /* ------------------------------------------------------------------------ */
 
@@ -193,22 +196,7 @@ form .page .field select{
   font-size: 17px;
   font-weight: 500;
 }
-form .page .field button{
-  width: 100%;
-  height: calc(100% + 5px);
-  border: none;
-  background: #2ea4d3;
-  margin-top: 25px;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: 0.5s ease;
-}
-form .page .field button:hover{
+form .page .botao button:hover{
   background: #0b344d;
 }
 form .page .btns button{
@@ -313,12 +301,44 @@ form .page .btns button.next{
 }
 
 .radiotext{
-  margin-left: 15px;
-  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 496px;
+  text-align: left;
 }
 
 .textarea{
   height: 300px;
   width: 496px;
   resize: none;
+}
+
+.radio{
+  width: 5px;
+  height: 5px;
+  display: flex;
+  margin-right: 5px;
+}
+
+.quantidade{
+  display: inline-flex;
+  margin-top: 10px;
+  float: left;
+  margin-right: 10px;
+}
+.quantidadef{
+  display: inline-flex;
+  margin-top: 10px;
+}
+
+.text-quant{
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+select{
+  margin-top: 10px;
+  width: 496px;
+  height: 50px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
 }
