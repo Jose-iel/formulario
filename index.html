@@ -7,10 +7,15 @@
     <title>Formulário | triggo.ai</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <header>Vamos começar!</header>
+      <h1 id="cabecalho" class="header">VAMOS COMEÇAR!</h1>
 
       <div class="progress-bar">
         <div class="step">
@@ -51,7 +56,7 @@
       </div>
 
       <div class="form-outer">
-        <form action="#">
+        <form action="#" onsubmit="enviarDados()">
           <div class="page slide-page">
 
             <div class="title">Preencha o formulário a seguir para iniciar o assessment</div>
@@ -83,12 +88,15 @@
                 </div>        
             </div>
             <div class="inputCampo">
+              <div class="inputcampo2">
               <div class="label">Seu cargo ou função:</div>
               <input type="text" id="office">
+              </div>
             </div>
             <div class="inputCampo">
               <div class="label">Segmento do negócio:</div>
               <select id="select">
+                <option hidden disabled selected value=></option>
                 <option value="Agricultura">Agricultura</option>
                 <option value="Comunicação">Comunicação</option>
                 <option value="Educação">Educação</option>
@@ -105,34 +113,34 @@
             </div>
 
             <div class="botao">
-              <button type="button" class="firstNext next">Avançar</button>
+              <button type="button" class="firstNext next" onclick="firstButton()">Avançar</button>
             </div>
           </div>
 
           <div class="page">
             <div class="title">Sua empresa já possui ou está implementando alguma dessas soluções?</div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Data Lake" id="s2option1">
+              <input class="radio" type="checkbox" value="Y" id="s2option1">
               <div class="radiotext">Data Lake</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Data Warehouse" id="s2option2">
+              <input class="radio" type="checkbox" value="Y" id="s2option2">
               <div class="radiotext">Data Warehouse</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Solução em Governança de Dados Enterprise" id="s2option3">
+              <input class="radio" type="checkbox" value="Y" id="s2option3">
               <div class="radiotext">Solução em Governança de Dados Enterprise</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Machine Learning em produção" id="s2option4">
+              <input class="radio" type="checkbox" value="Y" id="s2option4">
               <div class="radiotext">Machine Learning em produção</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Self Service BI" id="s2option5">
+              <input class="radio" type="checkbox" value="Y" id="s2option5">
               <div class="radiotext">Self Service BI</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Real Time Analytics" id="s2option6">
+              <input class="radio" type="checkbox" value="Y" id="s2option6">
               <div class="radiotext">Real Time Analytics</div>
             </div>
             <div class="botao">
@@ -144,31 +152,31 @@
           <div class="page">
             <div class="title">Qual estágio de adoção na Nuvem no seu ambiente Analytics?</div>
             <div class="field">
-              <input class="radio" type="checkbox" value="+80% - On premises &#40local&#41" id="s3option1">
+              <input class="radio" type="checkbox" value="Y" id="s3option1">
               <div class="radiotext">+80% - On premises &#40local&#41</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="+80% - Nuvem" id="s3option2">
+              <input class="radio" type="checkbox" value="Y" id="s3option2">
               <div class="radiotext">+80% - Nuvem</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="AWS" id="s3option3">
+              <input class="radio" type="checkbox" value="Y" id="s3option3">
               <div class="radiotext">AWS</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Azure" id="s3option4">
+              <input class="radio" type="checkbox" value="Y" id="s3option4">
               <div class="radiotext">Azure</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="GCP" id="s3option5">
+              <input class="radio" type="checkbox" value="Y" id="s3option5">
               <div class="radiotext">GCP</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Outros" id="s3option6">
+              <input class="radio" type="checkbox" value="Y" id="s3option6">
               <div class="radiotext">Outros</div>
             </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Hibrido &#40Nuvem + On Premises&#41" id="s3option7">
+              <input class="radio" type="checkbox" value="Y" id="s3option7">
               <div class="radiotext">Hibrido &#40Nuvem + On Premises&#41</div>
             </div>
             <div class="botao">
@@ -180,7 +188,7 @@
           <div class="page">
             <div class="title">Qual o seu volume de dados atual?</div>
             <div class="inputCampo">
-              <div class="label">Total de volume das bases de Analytics &#40últimos 3 mêses&#41</div>
+              <div class="label">Total de volume das bases de Analytics &#40últimos 3 meses&#41</div>
               <input type="text" id="analytics">
             </div>
             <div class="inputCampo">
@@ -201,7 +209,21 @@
             </div>
             <div class="botao" style="margin-top: 300px!important;">
               <button class="prev-4 prev">Anterior</button>
-              <button type="button" class="submit" onclick="salvarDados()">Finalizar</button>
+              <button type="submit" class="submit" onclick="salvarDados()">Finalizar</button>
+            </div>
+          </div>
+          <div class="page">
+            <div class="title"><h1>Baixe o PDF com o melhor plano para você</h1></div>
+            <div class="inputTextPDF">
+              <span class="textPDF">Olá <b><span id="myspan"></span>!</b></span>
+            </div>
+            <div class="inputTextPDF">
+              <span class="textPDF2">Através das informações que você nos forneceu, preparamos esse relatório para apresentar uma solução adequada à sua necessidade.</span>
+            </div>
+            <class class="botao" id="btnFinal">
+                <button type="button" id="imprimir">Baixar pdf</button>
+                <button type="button" id="sendEmail">Envie para o seu e-mail</button>
+                <button type="button">Converse com um especialista</button>
             </div>
           </div>
         </form>

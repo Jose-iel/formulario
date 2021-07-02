@@ -48,13 +48,29 @@
   .textarea{
     width: 348px!important;
   }
+  select{
+    width: 348px!important;
+  }
+  .textPDF2{
+    width: 348px!important;
+  }
+  .inputcampo2{
+    height: 100%!important;
+    margin-top: 90px!important;
+  }
 }
 
 *{
   margin: 0;
   padding: 0;
   outline: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: #2e3d49;
+}
+.header{
+  color: #5e5e5f;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 1000;
 }
 body{
   display: flex;
@@ -155,6 +171,11 @@ form .page .inputCampo input{
   margin-bottom: 10px;
 }
 
+#btnFinal{
+  display: block!important;
+  float: left;
+}
+
 .botao{
   display: flex;
   width: 496px;
@@ -186,6 +207,33 @@ form .page .inputCampo input{
 
 a{
   width: 100%;
+}
+
+h1{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 40px;
+
+}
+.textPDF{
+  float: left;
+  font-size: 20px;
+  width: 480px;
+  text-align: left;
+}
+.textPDF2{
+  float: left;
+  font-size: 20px;
+  width: 480px;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+.inputTextPDF{
+  width: 480px;
+  margin: 45px 0;
+  position: static;
+  margin-right: 300px;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -224,13 +272,13 @@ form .page .btns button.next{
 .container .progress-bar .step p{
   font-weight: 500;
   font-size: 18px;
-  color: #000;
+  color: #042031;
   margin-bottom: 8px;
 }
 .progress-bar .step .bullet{
   height: 25px;
   width: 25px;
-  border: 2px solid #000;
+  border: 2px solid #042031;
   display: inline-block;
   border-radius: 50%;
   position: relative;
@@ -341,4 +389,8 @@ select{
   height: 50px;
   border: 1px solid lightgrey;
   border-radius: 5px;
+}
+
+.inputcampo2{
+  height: 100%!important;
 }
