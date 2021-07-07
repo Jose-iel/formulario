@@ -28,11 +28,11 @@ function limpar(){
 }
 
 function firstButton(){
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const office = document.getElementById('office');
-    const select = document.getElementById('select');
-    const aviso = document.getElementById('aviso');
+    const name = "y"//document.getElementById('name');
+    const email = "y"//document.getElementById('email');
+    const office = "y"//document.getElementById('office');
+    const select = "y"//document.getElementById('select');
+    const aviso = "y"//document.getElementById('aviso');
 
   if ( name.value == "" || email.value == "" || office.value == "" || select.value == "") {
     name.style.cssText = "border:1px dashed #ff0000; transition: 0.2s"
@@ -107,6 +107,9 @@ function openSub(){
   }else{
     subRadio.style.display = 'flex';
   }
+  if (window.matchMedia("(width: 717px)").matches) {
+    subRadio.style.display = 'inline-block';
+  }
 }
 
 const subRadio2 = document.getElementById("subRadio2");
@@ -116,6 +119,9 @@ function openSub2(){
     subRadio2.style.display = 'inline-block';
   }else{
     subRadio2.style.display = 'flex';
+  }
+  if (window.matchMedia("(width: 717px)").matches) {
+    subRadio2.style.display = 'inline-block';
   }
 }
 

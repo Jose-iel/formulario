@@ -12,7 +12,7 @@
   .container{
     width: 360px!important;
     height: 1100px!important;
-    margin-left: 1px!important;
+    padding: 0!important;
   }
 
   .container .form-outer{
@@ -52,7 +52,12 @@
     width: 348px!important;
   }
   .textarea{
-    width: 348px!important;
+    width: 330px!important;
+    height: 295px!important;
+    margin-left: 20px!important;
+  }
+  .finaltext{
+    margin-left: 30px!important;
   }
   select{
     width: 348px!important;
@@ -71,6 +76,155 @@
     position: absolute!important;
   }
 }
+
+@media(max-width : 730px){
+  body{
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    background: #fff!important;
+    width: 360px!important;
+    height: 1100px!important;
+  }
+  .container{
+    width: 410px!important;
+    height: 1100px!important;
+    padding: 0!important;
+    margin-left: 50px!important;
+  }
+  select{
+    width: 395px!important;
+  }
+  .form-outer form .page .inputCampo{
+    width: 378px!important;
+  }
+  .botao{
+    width: 395px!important;
+  }
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after{
+  right: -68px!important;
+  width: 60px!important;
+  }
+  .textarea{
+    width: 338px!important;
+    margin-left: 15px;
+  }
+  .finaltext{
+    margin-left: 25px;
+  }
+}
+@media(max-width : 500px){
+  .textarea{
+    width: 308px!important;
+    margin-left: 6px!important;
+  }
+  .finaltext{
+    margin-left: 35px!important;
+  }
+}
+@media(width : 768px){
+  body{
+    margin-left: 150px!important;
+    margin-top: -100px!important;
+    height: 1340px!important;
+  }
+  .container{
+    height: 1000px!important;
+    padding: 0!important;
+  }
+  .textarea{
+    width: 450px!important;
+  }
+  .finaltext{
+    margin-left: 10px!important;
+  }
+}
+
+@media(width : 1024px){
+  body{
+    margin-top: -80px!important;
+    height: 1340px!important;
+  }
+  .container{
+    height: 1000px!important;
+    padding: 0!important;
+  }
+  .textarea{
+    width: 450px!important;
+  }
+  .finaltext{
+    margin-left: 10px!important;
+  }
+}
+
+@media(width : 540px){
+  body{
+    margin-top: -5px!important;
+    margin-left: -20px!important;
+    height: 1100px!important;
+    width: 530px!important;
+  }
+  .container{
+    height: 1100px!important;
+    padding: 0!important;
+  }
+  .textarea{
+    width: 380px!important;
+    margin-left: 10px!important;
+  }
+  .finaltext{
+    margin-left: 10px!important;
+  }
+}
+
+@media(width : 280px){
+  .textarea{
+    width: 330px!important;
+  }
+  .finaltext{
+    margin-left: 25px!important;
+  }
+}
+
+@media(width : 717px){
+  body{
+    margin-top: -5px!important;
+    height: 1100px!important;
+    width: 450px!important;
+  }
+  .container{
+    height: 1100px!important;
+    padding: 0!important;
+  }
+  .textarea{
+    width: 380px!important;
+    margin-left: 11px!important;
+  }
+  .finaltext{
+    margin-left: 10px!important;
+  }
+  .campoFold{
+    margin-bottom: 80px!important;
+  }
+  .header{
+    width: 600px;
+  }
+  .title{
+    width: 400px!important;
+  }
+  .progress-bar{
+    margin-left: 100px!important;
+    width: 400px!important;
+  }
+  .radio2{
+    position: absolute!important;
+  }
+  .radiotext2{
+    margin-left: 45px!important;
+  }
+}
+
 
 *{
   margin: 0;
