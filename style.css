@@ -12,6 +12,7 @@
   .container{
     width: 360px!important;
     height: 1100px!important;
+    margin-left: 1px!important;
   }
 
   .container .form-outer{
@@ -20,14 +21,19 @@
   .form-outer form .page .field{
     width: 348px!important;
   }
+  .form-outer form .page .field2{
+    width: 348px!important;
+    margin-top: -30px!important;
+    margin-left: -20px!important;
+  }
   .form-outer form .page .title{
     font-size: 20px!important;
     width: 350px!important;
   }
   .progress-bar .step .bullet:before,
   .progress-bar .step .bullet:after{
-  right: -36px!important;
-  width: 30px!important;
+  right: -57px!important;
+  width: 50px!important;
   }
   form .page .field .label{
     width: 370px!important;
@@ -57,6 +63,12 @@
   .inputcampo2{
     height: 100%!important;
     margin-top: 90px!important;
+  }
+  .radiotext2{
+    margin-left: 45px!important;
+  }
+  .radio2{
+    position: absolute!important;
   }
 }
 
@@ -266,7 +278,7 @@ form .page .btns button.next{
 }
 .container .progress-bar .step{
   text-align: center;
-  width: 110px;
+  width: 140px;
   position: relative;
 }
 .container .progress-bar .step p{
@@ -304,9 +316,9 @@ form .page .btns button.next{
   position: absolute;
   content: '';
   bottom: 11px;
-  right: -78px;
+  right: -110px;
   height: 3px;
-  width: 70px;
+  width: 105px;
   background: #262626;
 }
 .progress-bar .step .bullet.active:after{
@@ -393,4 +405,32 @@ select{
 
 .inputcampo2{
   height: 100%!important;
+}
+
+.radio2{
+  width: 16px;
+  height: 16px;
+  display: flex;
+  margin-right: 5px;
+  margin-left: 20px;
+  margin-top: 3px;
+}
+.radiotext2{
+  margin-left: 5px;
+  text-align: left; 
+  margin-right: 15px;
+}
+.field2{
+  width: 496px;
+  height: 20px;
+  position: relative;
+  display: none;
+}
+.aviso{
+  float: left;
+  margin-top: 15px;
+  color: rgb(197, 25, 25);
+  font-weight: 500;
+  display: none;
+  font-size: 14px;
 }

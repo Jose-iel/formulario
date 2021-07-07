@@ -46,13 +46,6 @@
           </div>
           <div class="check fas fa-check"></div>
         </div>
-        <div class="step">
-          <p>Seção</p>
-          <div class="bullet">
-            <span>5</span>
-          </div>
-          <div class="check fas fa-check"></div>
-        </div>
       </div>
 
       <div class="form-outer">
@@ -60,18 +53,19 @@
           <div class="page slide-page">
 
             <div class="title">Preencha o formulário a seguir para iniciar o assessment</div>
+            <span class="aviso" id="aviso">Os campos em vermelho são obrigatórios.</span>
             <div class="inputCampo">
               <div class="label">Nome completo:</div>
-              <input type="text" id="name">
+              <input type="text" id="name" onclick="limpar()">
             </div>
             <div class="inputCampo">
               <div class="label">E-mail corporativo:</div>
-              <input type="text" id="email">
+              <input type="text" id="email" onclick="limpar()">
             </div>
             <div class="inputCampo">
               <div class="label">Quantidade de funcionários da empresa:</div>
                 <div class="quantidade">
-                  <input type="radio" id="ate50" name="quantidade" class="radio" value="Até 50">
+                  <input type="radio" id="ate50" name="quantidade" class="radio" value="Até 50" checked>
                   <span class="text-quant">Até 50</span>
                 </div>
                 <div class="quantidade">
@@ -90,12 +84,12 @@
             <div class="inputCampo">
               <div class="inputcampo2">
               <div class="label">Seu cargo ou função:</div>
-              <input type="text" id="office">
+              <input type="text" id="office" onclick="limpar()">
               </div>
             </div>
             <div class="inputCampo">
               <div class="label">Segmento do negócio:</div>
-              <select id="select">
+              <select id="select" onclick="limpar()">
                 <option hidden disabled selected value=></option>
                 <option value="Agricultura">Agricultura</option>
                 <option value="Comunicação">Comunicação</option>
@@ -120,12 +114,36 @@
           <div class="page">
             <div class="title">Sua empresa já possui ou está implementando alguma dessas soluções?</div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Y" id="s2option1">
+              <input class="radio" type="checkbox" value="Y" id="s2option1" onclick="openSub()">
               <div class="radiotext">Data Lake</div>
             </div>
+              <div class="field2" id="subRadio">
+                  <input class="radio2" type="checkbox" value="Local" id="lakeLocal" onclick="verifyCheck()">
+                  <div class="radiotext2">Local</div>
+                  <input class="radio2" type="checkbox" value="AWS" id="lakeAWS" onclick="verifyCheck()">
+                  <div class="radiotext2">AWS</div>
+                  <input class="radio2" type="checkbox" value="Azure" id="lakeAzure" onclick="verifyCheck()">
+                  <div class="radiotext2">Azure</div>
+                  <input class="radio2" type="checkbox" value="GCP" id="lakeGCP" onclick="verifyCheck()">
+                  <div class="radiotext2">GCP</div>
+                  <input class="radio2" type="checkbox" value="Outro" id="lakeOutro" onclick="verifyCheck()">
+                  <div class="radiotext2">Outro</div>
+            </div>
             <div class="field">
-              <input class="radio" type="checkbox" value="Y" id="s2option2">
+              <input class="radio" type="checkbox" value="Y" id="s2option2" onclick="openSub2()">
               <div class="radiotext">Data Warehouse</div>
+            </div>
+            <div class="field2" id="subRadio2">
+              <input class="radio2" type="checkbox" value="Local" id="wareLocal" onclick="verifyCheck2()">
+              <div class="radiotext2">Local</div>
+              <input class="radio2" type="checkbox" value="AWS" id="wareAWS" onclick="verifyCheck2()">
+              <div class="radiotext2">AWS</div>
+              <input class="radio2" type="checkbox" value="Azure" id="wareAzure" onclick="verifyCheck2()">
+              <div class="radiotext2">Azure</div>
+              <input class="radio2" type="checkbox" value="GCP" id="wareGCP" onclick="verifyCheck2()">
+              <div class="radiotext2">GCP</div>
+              <input class="radio2" type="checkbox" value="Outro" id="wareOutro" onclick="verifyCheck2()">
+              <div class="radiotext2">Outro</div>
             </div>
             <div class="field">
               <input class="radio" type="checkbox" value="Y" id="s2option3">
@@ -150,42 +168,6 @@
           </div>
 
           <div class="page">
-            <div class="title">Qual estágio de adoção na Nuvem no seu ambiente Analytics?</div>
-            <div class="field">
-              <input class="radio" type="checkbox" value="Y" id="s3option1">
-              <div class="radiotext">+80% - On premises &#40local&#41</div>
-            </div>
-            <div class="field">
-              <input class="radio" type="checkbox" value="Y" id="s3option2">
-              <div class="radiotext">+80% - Nuvem</div>
-            </div>
-            <div class="field">
-              <input class="radio" type="checkbox" value="Y" id="s3option3">
-              <div class="radiotext">AWS</div>
-            </div>
-            <div class="field">
-              <input class="radio" type="checkbox" value="Y" id="s3option4">
-              <div class="radiotext">Azure</div>
-            </div>
-            <div class="field">
-              <input class="radio" type="checkbox" value="Y" id="s3option5">
-              <div class="radiotext">GCP</div>
-            </div>
-            <div class="field">
-              <input class="radio" type="checkbox" value="Y" id="s3option6">
-              <div class="radiotext">Outros</div>
-            </div>
-            <div class="field">
-              <input class="radio" type="checkbox" value="Y" id="s3option7">
-              <div class="radiotext">Hibrido &#40Nuvem + On Premises&#41</div>
-            </div>
-            <div class="botao">
-              <button type="button" class="prev-2 prev">Anterior</button>
-              <button type="button" class="next-2 next">Avançar</button>
-            </div>
-          </div>
-
-          <div class="page">
             <div class="title">Qual o seu volume de dados atual?</div>
             <div class="inputCampo">
               <div class="label">Total de volume das bases de Analytics &#40últimos 3 meses&#41</div>
@@ -196,8 +178,8 @@
               <input type="text" id="history">
             </div>
             <div class="botao">
-              <button type="button" class="prev-3 prev">Anterior</button>
-              <button type="button" class="next-3">Avançar</button>
+              <button type="button" class="prev-2 prev">Anterior</button>
+              <button type="button" class="next-2">Avançar</button>
             </div>
           </div>
 
@@ -208,12 +190,12 @@
               <textarea class="textarea" id="message" cols="" rows="" placeholder=" |" onfocus="this.placeholder=''" onblur="this.placeholder=' |'"></textarea>
             </div>
             <div class="botao" style="margin-top: 300px!important;">
-              <button class="prev-4 prev">Anterior</button>
+              <button class="prev-3 prev">Anterior</button>
               <button type="submit" class="submit" onclick="salvarDados()">Finalizar</button>
             </div>
           </div>
           <div class="page">
-            <div class="title"><h1>Baixe o PDF com o melhor plano para você</h1></div>
+            <div class="title"><h1>Descubra qual é a melhor estratégia para o seu negócio</h1></div>
             <div class="inputTextPDF">
               <span class="textPDF">Olá <b><span id="myspan"></span>!</b></span>
             </div>
@@ -221,7 +203,7 @@
               <span class="textPDF2">Através das informações que você nos forneceu, preparamos esse relatório para apresentar uma solução adequada à sua necessidade.</span>
             </div>
             <class class="botao" id="btnFinal">
-                <button type="button" id="imprimir">Baixar pdf</button>
+                <button type="button" id="imprimir">Baixe o relatório em pdf</button>
                 <button type="button" id="sendEmail">Envie para o seu e-mail</button>
                 <button type="button">Converse com um especialista</button>
             </div>

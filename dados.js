@@ -1,4 +1,5 @@
 let data = {};
+let dados1 = [];
 
 function salvarDados(){
     //SECTION-01
@@ -45,19 +46,93 @@ function salvarDados(){
 
     //SECTION-02
     const dataLake = document.getElementById('s2option1');
+    const lakeLocal = document.getElementById('lakeLocal');
+    const lakeAWS = document.getElementById('lakeAWS');
+    const lakeAzure = document.getElementById('lakeAzure');
+    const lakeGCP = document.getElementById('lakeGCP');
+    const lakeOutro = document.getElementById('lakeOutro');
+
     const dataWare = document.getElementById('s2option2');
+    const wareLocal = document.getElementById('wareLocal');
+    const wareAWS = document.getElementById('wareAWS');
+    const wareAzure = document.getElementById('wareAzure');
+    const wareGCP = document.getElementById('wareGCP');
+    const wareOutro = document.getElementById('wareOutro');
+
     const governance = document.getElementById('s2option3');
     const machineLearning = document.getElementById('s2option4');
     const selfService = document.getElementById('s2option5');
     const realTimeAnalytics = document.getElementById('s2option6');
+        
 
-    if (dataLake.checked){
-        const dados = dataLake.value
-        data.dataLake = dados
+    if (lakeLocal.checked){
+        const dados = lakeLocal.value
+        dados1[0] = dados + " "
+    }else{
+        dados1[0] = ""
     }
+    if (lakeAWS.checked){
+        const dados = lakeAWS.value
+        dados1[1] = dados + " "
+    }else{
+        dados1[1] = ""
+    }
+    if (lakeAzure.checked){
+        const dados = lakeAzure.value
+        dados1[2] = dados + " "
+    }else{
+        dados1[2] = ""
+    }
+    if (lakeGCP.checked){
+        const dados = lakeGCP.value
+        dados1[3] = dados + " "
+    }else{
+        dados1[3] = ""
+    }
+    if (lakeOutro.checked){
+        const dados = lakeOutro.value
+        dados1[4] = dados + " "
+    }else{
+        dados1[4] = ""
+    }
+    
+    if (dataLake.checked){
+        data.dataLake = dados1[0] + dados1[1] + dados1[2] + dados1[3] + dados1[4]
+    }
+
+    if (wareLocal.checked){
+        const dados = wareLocal.value
+        dados1[5] = dados + " "
+    }else{
+        dados1[5] = ""
+    }
+    if (wareAWS.checked){
+        const dados = wareAWS.value
+        dados1[6] = dados + " "
+    }else{
+        dados1[6] = ""
+    }
+    if (wareAzure.checked){
+        const dados = wareAzure.value
+        dados1[7] = dados + " "
+    }else{
+        dados1[7] = ""
+    }
+    if (wareGCP.checked){
+        const dados = wareGCP.value
+        dados1[8] = dados + " "
+    }else{
+        dados1[8] = ""
+    }
+    if (wareOutro.checked){
+        const dados = wareOutro.value
+        dados1[9] = dados + " "
+    }else{
+        dados1[9] = ""
+    }
+
     if (dataWare.checked){
-        const dados = dataWare.value
-        data.dataWare = dados
+        data.dataWare = dados1[5] + dados1[6] + dados1[7] + dados1[8] + dados1[9]
     }
     if (governance.checked){
         const dados = governance.value
@@ -77,44 +152,6 @@ function salvarDados(){
     }
     
     //SECTION-03
-    const onPremises = document.getElementById('s3option1');
-    const cloud = document.getElementById('s3option2');
-    const aws = document.getElementById('s3option3');
-    const azure = document.getElementById('s3option4');
-    const gcp = document.getElementById('s3option5');
-    const others = document.getElementById('s3option6');
-    const hybrid = document.getElementById('s3option7');
-
-    if (onPremises.checked){
-        const dados = onPremises.value
-        data.onPremises = dados
-    }
-    if (cloud.checked){
-        const dados = cloud.value
-        data.cloud = dados
-    }
-    if (aws.checked){
-        const dados = aws.value
-        data.aws = dados
-    }
-    if (azure.checked){
-        const dados = azure.value
-        data.azure = dados
-    }
-    if (gcp.checked){
-        const dados = gcp.value
-        data.gcp = dados
-    }
-    if (others.checked){
-        const dados = others.value
-        data.others = dados
-    }
-    if (hybrid.checked){
-        const dados = hybrid.value
-        data.hybrid = dados
-    }
-
-    //SECTION-04
     if(document.getElementById("analytics").value.length >= 1){
         data.analytics = document.getElementById('analytics').value;
     }
@@ -123,12 +160,14 @@ function salvarDados(){
         data.history = document.getElementById('history').value;
     }
 
-    //SECTION-05
+    //SECTION-04
     if(document.getElementById("message").value.length >= 1){
         data.message = document.getElementById('message').value;
     }
 
     document.getElementById('cabecalho').innerHTML="FINALIZADO COM SUCESSO";
+
+    console.log(data);
     
 }
 
@@ -152,7 +191,6 @@ var imprimir = document.getElementById('imprimir');
     
 imprimir.addEventListener('click', function click() {
     console.log('Aqui vai os dados para imprimir');
-
     imprimir.removeEventListener('click', click);
 });
 
@@ -166,3 +204,35 @@ button.addEventListener('click', function click() {
     alert("Email enviado com sucesso");
     button.removeEventListener('click', click);
 });
+
+
+const dataLake = document.getElementById('s2option1');
+const lakeLocal = document.getElementById('lakeLocal');
+const lakeAWS = document.getElementById('lakeAWS');
+const lakeAzure = document.getElementById('lakeAzure');
+const lakeGCP = document.getElementById('lakeGCP');
+const lakeOutro = document.getElementById('lakeOutro');
+
+function verifyCheck() {
+    if(lakeLocal.checked || lakeAWS.checked || lakeAzure.checked || lakeGCP.checked || lakeOutro.checked){
+        document.getElementById('s2option1').disabled = true;
+        document.getElementById('s2option1').checked = true;
+    }else{
+        document.getElementById('s2option1').disabled = false;
+    }
+}
+
+const wareLocal = document.getElementById('wareLocal');
+const wareAWS = document.getElementById('wareAWS');
+const wareAzure = document.getElementById('wareAzure');
+const wareGCP = document.getElementById('wareGCP');
+const wareOutro = document.getElementById('wareOutro');
+
+function verifyCheck2() {
+    if(wareLocal.checked || wareAWS.checked || wareAzure.checked || wareGCP.checked || wareOutro.checked){
+        document.getElementById('s2option2').disabled = true;
+        document.getElementById('s2option2').checked = true;
+    }else{
+        document.getElementById('s2option2').disabled = false;
+    }
+}
