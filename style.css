@@ -75,6 +75,10 @@
   .radio2{
     position: absolute!important;
   }
+  .line {
+    width: 355px!important;
+    margin-left: 25px!important;
+  }
 }
 
 @media(max-width : 730px){
@@ -222,6 +226,14 @@
   }
   .radiotext2{
     margin-left: 45px!important;
+  }
+  .line {
+    width: 355px!important;
+    margin-left: 135px!important;
+  }
+  .containerFinal{
+    width: 400px;
+    margin-left: 112px;
   }
 }
 
@@ -555,6 +567,7 @@ select{
   height: 50px;
   border: 1px solid lightgrey;
   border-radius: 5px;
+  background-color: #fff;
 }
 
 .inputcampo2{
@@ -587,4 +600,25 @@ select{
   font-weight: 500;
   display: none;
   font-size: 14px;
+}
+.line {
+  width: 465px;
+  border-top: 2px solid lightgrey;
+  margin-left: 130px;
+  margin-top: 10px;
+}
+.plFinal{
+  margin-top: 10px;
+}
+.politicaPr{
+  color: #1d95d3;
+  font-size: 13px;
+  text-decoration: none;
+}
+.copyright{
+  font-size: 16px;
+  font-weight: 500;
+}
+.sysmap{
+  font-size: 13px;
 }
